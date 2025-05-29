@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+  <!-- Landing Page -->
+  <section id="landing-page">
+    <div class="hero">
+      <h1>Create Your Professional Resume</h1>
+      <p>Build a job-winning resume in minutes with live preview and customizable templates.</p>
+      <button onclick="startBuilding()">Start Building</button>
+      <div class="switchers">
+        <a href="#" onclick="switchTemplate()">Template Switcher</a> | 
+        <a href="#" onclick="toggleTheme()">Theme Switcher</a> | 
+        <a href="#" onclick="fillSampleData()">Auto-Fill Sample</a>
+      </div>
+    </div>
+    <footer>
+      <p>© 2025 Resume Builder | Built with 💻 HTML, CSS & JS | <a href="#">GitHub</a></p>
+    </footer>
+  </section>
+
+  <!-- Resume Builder Section -->
+  <section id="resume-builder" style="display:none;">
+    <div class="form-container">
+      <form id="cv-form">
+        <h2>Personal Info</h2>
+        <input type="text" id="nameField" placeholder="Full Name" />
+        <input type="text" id="guardianField" placeholder="Guardian Name" />
+        <input type="text" id="contactField" placeholder="Contact Number" />
+        <input type="email" id="emailField" placeholder="Email" />
+        <input type="text" id="addressField" placeholder="Address" />
+        <input type="url" id="githubField" placeholder="GitHub Profile Link" />
+        <input type="file" id="imgField" accept="image/*" />
+
+        <h2>Profile Summary</h2>
+        <textarea id="summaryField" placeholder="Write a brief profile summary..."></textarea>
+
+        <h2>Skills</h2>
+        <input type="text" id="skillsField" placeholder="Comma-separated skills" />
+
+        <h2>Languages</h2>
+        <input type="text" id="languagesField" placeholder="e.g. English: Fluent" />
+
+        <h2>Hobbies</h2>
+        <input type="text" id="hobbiesField" placeholder="e.g. Reading, Music" />
+
+        <h2>Education</h2>
+        <div id="edu-container"></div>
+        <button type="button" onclick="addEducation()">+ Add Education</button>
+
+        <h2>Experience</h2>
+        <div id="exp-container"></div>
+        <button type="button" onclick="addExperience()">+ Add Company</button>
+
+        <h2>Projects</h2>
+        <div id="proj-container"></div>
+        <button type="button" onclick="addProject()">+ Add Project</button>
+
+        <br/><br/>
+        <button type="button" onclick="generateCV()">Generate Resume</button>
+        <button type="button" onclick="downloadPDF()">Download PDF</button>
+      </form>
+    </div>
+    <div id="cv-preview" class="template1"></div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>
