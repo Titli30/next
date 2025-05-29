@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body.light-mode {
+  background: #f8f9fa;
+  color: #000;
+}
+
+body.dark-mode {
+  background: #181818;
+  color: #fff;
+}
+
+#landing-page {
+  height: 100vh;
+  background: linear-gradient(to right, #58c6ef, #1b94b4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 15vh;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 10px 25px;
+  font-size: 1em;
+  background: white;
+  color: #1b94b4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.switchers {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+#resume-builder {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  gap: 30px;
+}
+
+.form-container {
+  width: 40%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  background: #1b94b4;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+#cv-preview {
+  width: 60%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 90vh;
+  border-left: 2px solid #ccc;
+}
+
+#cv-preview img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Template 1 */
+.template1 h1 { font-size: 2em; }
+.template1 ul { padding-left: 20px; }
+
+/* Template 2 */
+.template2 {
+  background: #f2f2f2;
+  border-left: 5px solid #1b94b4;
+}
